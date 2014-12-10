@@ -1,5 +1,5 @@
 --
--- ÜB 1, Programmierparadigmen 2014, KIT
+-- ÜB 1, Programmierparadigmen KIT 2014/2015
 --
 -- Pascal Knodel
 --

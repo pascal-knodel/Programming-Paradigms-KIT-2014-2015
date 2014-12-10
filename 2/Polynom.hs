@@ -1,3 +1,8 @@
+--
+-- ÜB 2, Programmierparadigmen KIT 2014/2015
+--
+-- Pascal Knodel
+--
 module Polynom where
 
 

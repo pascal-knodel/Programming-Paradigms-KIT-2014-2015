@@ -1,5 +1,5 @@
 --
--- ÜB 1, Programmierparadigmen 2014, KIT
+-- ÜB 1, Programmierparadigmen KIT 2014/2015
 --
 -- Pascal Knodel
 --
@@ -668,7 +668,7 @@ Positive {getPositive = 80}
 -- GHCi> negate it
 -- 6
 --
--- Jedoch gibt er einen ersten Eindruck, ob die Umsetung der Definition überhaupt funktioniert.
+-- Jedoch gibt er einen ersten Eindruck, ob die Umsetzung der Definition überhaupt richtig ist.
 
 
 
@@ -680,7 +680,7 @@ Positive {getPositive = 80}
 isPrime :: Integer -> Bool
 isPrime n
 
- |  n < 2      = error "Kleiner Zwei"
+ |  n < 2      = error "Kleiner als die kleinste Primzahl: Zwei."
  |  otherwise  = null [ 1 | d <- 2 : [ 3, 5 .. root 2 n ] , n `mod` d == 0 ]
 
 
