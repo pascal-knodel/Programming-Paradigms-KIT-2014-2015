@@ -32,15 +32,14 @@ module Binding where
 --             der Listen-Kurzschreibweise definierte Name gilt.
 --
 --
--- Zudem: Assoziativitäten / Klammerung beachten. 
+-- (!) Verschachtelte Funktionen werden von außen nach innen ausgewertet. Ansonsten von links nach rechts.
 --
--- 
--- (!) Was im Inneren definiert wird, gilt auch dort und nicht außerhalb.
+-- (!) 'Was im Inneren definiert wird, gilt auch dort und nicht außerhalb'.
 --     Z.B. bei verschachtelten let-Ausdrücken: let ... in let ... in ... = let ... in (let ... in ...)
 --
 -- (!) Mit Semikolons können mehrere Definitionen in eine Zeile geschrieben werden.
 --
--- (!) Vorsicht bei Verschattungen/Verdunklungen/Verdeckungen (d.h. der äußere Name gilt nicht, da es
+-- (!) Vorsicht bei Verdeckungen/Verschattungen (d.h. der äußere Name gilt innen nicht, da es
 --     eine innere Bindung gibt, die stärker ist).
 --
 --
@@ -295,13 +294,14 @@ h
 
 -}
 -- 
--- Interrupted.
+-- Berechnung unterbrochen mit STRG + C (Windows CMD).
 
 
 
 -- Fragen:
 --
--- Wieso erkennt GHC(i) beim Aufruf "g 1" die Schleife, beim Aufruf "h" jedoch nicht?
+-- Wieso erkennt GHC(i) (The Glorious Glasgow Haskell Compilation System, version 7.8.3)
+-- beim Aufruf "g 1" die Schleife, beim Aufruf "h" jedoch nicht?
 --
 -- Ein Unterstrich bindet nicht. Warum? Wie wird ein Unterstrich übersetzt?
 
