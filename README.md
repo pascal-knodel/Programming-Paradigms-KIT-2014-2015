@@ -7,6 +7,7 @@ Proposals for changes or improvements are welcome. Neither correctness nor compl
 
 
 [1] https://pp.info.uni-karlsruhe.de/lehre/WS201415/paradigmen/
+
 [2] https://pp.info.uni-karlsruhe.de/lehre/WS201415/paradigmen/uebung/
 
 
