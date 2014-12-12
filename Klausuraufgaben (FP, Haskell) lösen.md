@@ -1,10 +1,10 @@
 :mortar_board: Aufgabe lesen
 
-:) Zusicherungen erkennen (entweder markieren oder noch Mal extra abschreiben)
+:mortar_board: Zusicherungen erkennen (entweder markieren oder noch Mal extra abschreiben)
    - Wie helfen diese bei der Definition der Problemlösung?
    - Welche Fälle müssen wir wegen einer Zusicherung beachten oder nicht beachten?
    
-:) Bei rekursiven Funktionen
+:mortar_board: Bei rekursiven Funktionen
    - Welche Spezialfälle gibt es, in denen z.B. ein "error" Aufruf angebracht ist?
    - Wie viele Abbruchbedingungen gibt es?
    - Bricht die Rekursion ab?
@@ -22,12 +22,12 @@
    - Wenn Endrekursion verlangt wird, ist oft eine Definition mit 'guard(s)'
      einfacher und gilt vielleicht schon als Lösung.
 
-:) Typische Fehler vermeiden:
+:mortar_board: Typische Fehler vermeiden:
    - Falsche Anzahl von Argumenten / Argument vergessen, ... .
    - Nach einer Umbenennung (z.B. eines Arguments) stimmt die Definition nicht mehr.
    - Listen von Listen: Listenumklammerung zu viel oder zu wenig.
    - 'Den richtigen' Vergleich wählen: < oder <=, > oder >=, ...
    - Auf 'die richtige' Reihenfolge beim 'pattern matsching' achten.
 
-:) Wenn noch Zeit übrig ist: Test Eingabe(n) im Kopf oder schriftlich auswerten
+:mortar_board: Wenn noch Zeit übrig ist: Test Eingabe(n) im Kopf oder schriftlich auswerten
    (kurze Eingaben nehmen, die evtl. einen schwierigeren Fall beschreiben).
