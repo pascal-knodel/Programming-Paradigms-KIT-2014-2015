@@ -90,7 +90,27 @@ primes
 primepowers :: Integer -> [Integer]
 primepowers n
 
- =  undefined
+ =  primepowers' powerstreams
+ 
+ where
+ 
+ powerstreams :: [[Integer]]
+ powerstreams = [ map (^e) primes | e <- [1..n] ]
+ 
+ primepowers' :: [[Integer]] -> [Integer]
+ primepowers' [] = []
+ primepowers' (p : ps) =  p `merge` primepowers' ps
+ 
+ 
+
+primepowers2 :: Integer -> [Integer]
+primepowers2 n =  foldr merge [] [ map (^e) primes | e <- [1..n] ]
+
+
+
+primepowers3 :: Integer -> [Integer]
+primepowers3 n =  foldr1 merge [ map (^e) primes | e <- [1..n] ]
+
 
 
 
