@@ -56,7 +56,7 @@ nosi (a : as) bs
 
 -- nosi; 'no stream intersect' ...
 --
--- ... erzeugt keine 'schrittweise' unendliche Liste, wenn beide Eingabelisten unendlich sind.
+-- ... erzeugt keine 'schrittweise' / 'fließend' unendliche Liste, wenn beide Eingabelisten unendlich sind.
 -- ... terminiert nicht, wenn die erste Liste unendlich ist.
 --
 -- GHCi> nosi [1 ..] [1,2]
@@ -73,7 +73,31 @@ nosi (a : as) bs
 
 
 intersectAll :: (Ord t) => [[t]] -> [t]
-intersectAll =  undefined
+intersectAll [a] = a
+intersectAll (a : as)
+
+ =  a `intersect` intersectAll as
+
+intersectAll []  = error "Leere Liste von Listen."
+
+-- GHCi> intersectAll [ [1 ..] , [1 .. 10] ]
+-- [1,2,3,4,5,6,7,8,9,10]
+
+-- GHCi> intersectAll [ [1 .. 10] , [1 ..] ]
+-- [1,2,3,4,5,6,7,8,9,10]
+
+-- GHCi> intersectAll [ [1 ..] , [1] , [1 ..] ]
+-- [1]
+
+-- GHCi> intersectAll [ [1 ..] , [1 ..] ]
+-- 
+-- Produziert den Schnitt-'stream'.
+
+
+
+intersectAll2 :: (Ord t) => [[t]] -> [t]
+intersectAll2 []  = undefined
+intersectAll2 (a : as) =  foldr intersect a as
 
 
 
@@ -82,7 +106,37 @@ intersectAll =  undefined
 -------------
 
 
-commonMultiples a b c =  undefined
+commonMultiples :: Integer -> Integer -> Integer -> [Integer]
+commonMultiples i1 i2 i3
+
+ =  let multiples i = [ i * f | f <- [1 ..] ]
+ 
+    in  intersectAll [  multiples i  |  i <- [i1 , i2 , i3]  ]
+
+-- GHCi> commonMultiples 1 1 1
+--
+-- Produziert den 'stream' der natürlichen Zahlen ohne 0.
+
+
+
+commonMultiples2 :: Integer -> Integer -> Integer -> [Integer]
+commonMultiples2 i1 i2 i3
+
+ =  intersectAll [ multiples i | i <- [i1 , i2 , i3] ]
+ 
+ where
+ 
+ multiples :: Integer -> [Integer]
+ multiples i =  [ i * f | f <- [1 ..] ]
+
+
+
+
+-- Erfahrungen aus dieser Aufgabe / Klausur Tipps:
+-- 
+-- (!) Mit mehreren 'list comprehensions' arbeiten, nicht alles in eine packen.
+--
+-- (!) Bei Listen von Listen auf die richtige Umklammerung achten.
 
 
 

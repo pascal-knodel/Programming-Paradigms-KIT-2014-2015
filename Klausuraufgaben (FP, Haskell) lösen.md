@@ -25,9 +25,16 @@
 :mortar_board: Typische Fehler vermeiden:
    - Falsche Anzahl von Argumenten / Argument vergessen, ... .
    - Nach einer Umbenennung (z.B. eines Arguments) stimmt die Definition nicht mehr.
-   - Listen von Listen: Listenumklammerung zu viel oder zu wenig.
+   - Listen von Listen: Listenumklammerung zu viel oder zu wenig
+     (z.B. f :: [[t]] -> [t] ; f [a] = a).
    - 'Den richtigen' Vergleich wählen: < oder <=, > oder >=, ...
    - Auf 'die richtige' Reihenfolge beim 'pattern matsching' achten.
+   - Muster die nicht jedes Mal verglichen werden müssen beim 'pattern matching' 
+     hinten anstellen.
 
 :mortar_board: Wenn noch Zeit übrig ist: Test Eingabe(n) im Kopf oder schriftlich auswerten
    (kurze Eingaben nehmen, die evtl. einen schwierigeren Fall beschreiben).
+
+
+
+

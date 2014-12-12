@@ -12,19 +12,24 @@ module Merge where
 ----------
 
 
+-- Zuerst Zusicherungen notieren und später ausnutzen:
+--
+-- (!) Sortierte Listen.
+
+
 
 -- Aufgabe 1:
 -------------
 
 
 merge :: Ord t => [t] -> [t] -> [t]
-merge [] bs =  bs
-merge as [] =  as
 merge (a : as) (b : bs)
  
  |  a <= b     = a : merge      as  (b : bs)
  |  otherwise  = b : merge (a : as)      bs
- 
+
+merge [] bs =  bs
+merge as [] =  as
 
 
 -- Achtung:
@@ -35,6 +40,7 @@ merge (a : as) (b : bs)
 --     da nachdem ein Element (entweder a oder b) vorne einsortiert wurde,
 --     könnte das folgende Element a2 aus (a1 : a2 : as) auch vor b liegen.
 --     Deshalb immer nur ein Element voranstellen.
+
 
 
 wrongMerge :: Ord t => [t] -> [t] -> [t]
@@ -85,14 +91,6 @@ primepowers :: Integer -> [Integer]
 primepowers n
 
  =  undefined
-
-
--- Erfahrungen aus dieser Aufgabe / Klausur Tipps:
--- 
--- (!) Mit mehreren 'list comprehensions' arbeiten, nicht alles in eine packen.
---
--- (!) Bei Listen von Listen auf die richtige Umklammerung achten.
-
 
 
 
