@@ -90,12 +90,12 @@ primes
 primepowers :: Integer -> [Integer]
 primepowers n
 
- =  primepowers' powerstreams
+ =  primepowers' primepowerstreams
  
  where
  
- powerstreams :: [[Integer]]
- powerstreams = [ map (^e) primes | e <- [1..n] ]
+ primepowerstreams :: [[Integer]]
+ primepowerstreams = [ map (^e) primes | e <- [1..n] ]
  
  primepowers' :: [[Integer]] -> [Integer]
  primepowers' [] = []
@@ -104,12 +104,17 @@ primepowers n
  
 
 primepowers2 :: Integer -> [Integer]
-primepowers2 n =  foldr merge [] [ map (^e) primes | e <- [1..n] ]
+primepowers2 n =  foldr merge [] [ map (\p -> p ^ e) primes | e <- [1..n] ]
 
 
 
 primepowers3 :: Integer -> [Integer]
-primepowers3 n =  foldr1 merge [ map (^e) primes | e <- [1..n] ]
+primepowers3 n =  foldr merge [] [ map (^e) primes | e <- [1..n] ]
+
+
+
+primepowers4 :: Integer -> [Integer]
+primepowers4 n =  foldr1 merge [ map (^e) primes | e <- [1..n] ]
 
 
 

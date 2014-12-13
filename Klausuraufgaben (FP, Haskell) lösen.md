@@ -1,10 +1,9 @@
 :mortar_board: Aufgabe lesen
-
-:mortar_board: Zusicherungen erkennen (entweder markieren oder noch Mal extra abschreiben)
+   - Zusicherungen erkennen (entweder markieren oder noch Mal extra abschreiben)
    - Wie helfen diese bei der Definition der Problemlösung?
    - Welche Fälle müssen wir wegen einer Zusicherung beachten oder nicht beachten?
    
-:mortar_board: Bei rekursiven Funktionen
+:mortar_board: Rekursive Funktionen
    - Welche Spezialfälle gibt es, in denen z.B. ein "error" Aufruf angebracht ist?
    - Wie viele Abbruchbedingungen gibt es?
    - Bricht die Rekursion ab?
@@ -35,6 +34,9 @@
    - Auf 'die richtige' Reihenfolge beim 'pattern matsching' achten.
    - Muster die nicht jedes Mal verglichen werden müssen beim 'pattern matching' 
      hinten anstellen.
+   - Bei Lambda Abstraktionen 'rule of cancelation' beachten, damit am Ende
+     der Typ nach dem Gleichheizzeichen mit einer gewünschten Typsignatur vor
+	 dem Funktionsdefinition übereinstimmt.
 
 :mortar_board: Wenn noch Zeit übrig ist: Test Eingabe(n) im Kopf oder schriftlich auswerten
    (kurze Eingaben nehmen, die evtl. einen schwierigeren Fall beschreiben).

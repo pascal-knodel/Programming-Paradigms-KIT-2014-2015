@@ -134,7 +134,8 @@ commonMultiples2 i1 i2 i3
 
 -- Erfahrungen aus dieser Aufgabe / Klausur Tipps:
 -- 
--- (!) Mit mehreren 'list comprehensions' arbeiten, nicht alles in eine packen.
+-- (!) Mit mehreren 'list comprehensions' arbeiten,
+--     nicht alles in eine packen (wollen).
 --
 -- (!) Bei Listen von Listen auf die richtige Umklammerung achten.
 
