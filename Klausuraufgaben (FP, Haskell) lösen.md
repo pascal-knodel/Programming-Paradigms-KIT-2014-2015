@@ -25,6 +25,9 @@
    - Manchmal ist es hilfreich, eine weitere Liste von unendlichen Listen
      zu definieren und diese im nachhinein wieder rekursiv zu bearbeiten.
 
+:mortar_board: Hilfreiches
+   - Partielle Anwendung von zip [startIndex ..] nummeriert Listenelemente als Tupel durch.
+
 :mortar_board: Typische Fehler vermeiden:
    - Falsche Anzahl von Argumenten / Argument vergessen, ... .
    - Nach einer Umbenennung (z.B. eines Arguments) stimmt die Definition nicht mehr.
